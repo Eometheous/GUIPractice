@@ -24,7 +24,8 @@ public class CarIcon implements Icon {
         double wheel2X = getXBody(centerX) + (width - 8) * zoomLevel;
         double wheel2Y = getYBody(centerY) + height * zoomLevel;
 
-        Rectangle2D body = new Rectangle2D.Double(getXBody(centerX), getYBody(centerY), width * zoomLevel, height * zoomLevel);
+        Rectangle2D body = new Rectangle2D.Double(getXBody(centerX), getYBody(centerY),
+                width * zoomLevel, height * zoomLevel);
 
         Ellipse2D wheel1 = new Ellipse2D.Double();
         Ellipse2D wheel2 = new Ellipse2D.Double();
@@ -32,7 +33,8 @@ public class CarIcon implements Icon {
         wheel2.setFrameFromCenter(wheel2X, wheel2Y, wheel2X + 5 * zoomLevel, wheel2Y + 5 * zoomLevel);
 
         Ellipse2D roof = new Ellipse2D.Double();
-        roof.setFrameFromCenter(centerX, centerY - (height>>1), centerX + 15, centerY - (height>>1) + 13);
+        roof.setFrameFromCenter(centerX, centerY - (height>>1) * zoomLevel,
+                centerX + 15 * zoomLevel, centerY - (height>>1) + 13 * zoomLevel);
 
         Graphics2D g2 = (Graphics2D) g;
         g2.setColor(Color.RED);
@@ -63,9 +65,5 @@ public class CarIcon implements Icon {
 
     public void zoom(Double amount) {
         zoomLevel += amount;
-    }
-
-    public double getZoomLevel() {
-        return zoomLevel;
     }
 }

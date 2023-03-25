@@ -2,7 +2,6 @@ package chapt4.assignment20;
 
 import java.awt.*;
 import java.awt.geom.*;
-import java.util.*;
 
 /**
  A car that can be moved around.

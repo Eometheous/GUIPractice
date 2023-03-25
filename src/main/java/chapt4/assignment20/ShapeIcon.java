@@ -9,10 +9,10 @@ import javax.swing.*;
  */
 public class ShapeIcon implements Icon
 {
-    public ShapeIcon(MoveableShape shape,
+    public ShapeIcon(ArrayList<MoveableShape> shapes, // edited by Jonathan Stewart Thomas
                      int width, int height)
     {
-        this.shape = shape;
+        this.shapes = shapes; // edited by Jonathan Stewart Thomas
         this.width = width;
         this.height = height;
     }
@@ -30,12 +30,14 @@ public class ShapeIcon implements Icon
     public void paintIcon(Component c, Graphics g, int x, int y)
     {
         Graphics2D g2 = (Graphics2D) g;
-        shape.draw(g2);
+        for (MoveableShape shape : shapes) { // for loop added by Jonathan Stewart Thomas
+            shape.draw(g2);
+        }
     }
 
-    private int width;
-    private int height;
-    private MoveableShape shape;
+    private final int width; // made final by Jonathan Stewart Thomas
+    private final int height; // made final by Jonathan Stewart Thomas
+    private final ArrayList<MoveableShape> shapes; // edited by Jonathan Stewart Thomas
 }
 
 

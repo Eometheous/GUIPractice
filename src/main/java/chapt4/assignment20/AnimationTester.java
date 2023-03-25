@@ -1,7 +1,7 @@
 package chapt4.assignment20;
 
 import java.awt.*;
-import java.awt.event.*;
+import java.util.ArrayList;
 import javax.swing.*;
 
 /**
@@ -14,9 +14,13 @@ public class AnimationTester
     {
         JFrame frame = new JFrame();
 
-        MoveableShape shape = new CarShape(0, 0, CAR_WIDTH);
-
-        ShapeIcon icon = new ShapeIcon(shape,
+        // this block of code was edited by Jonathan Stewart Thomas
+        MoveableShape shape1 = new CarShape(0, 0, CAR_WIDTH);
+        MoveableShape shape2 = new CarShape(CAR_WIDTH + 20, 0, CAR_WIDTH);
+        ArrayList<MoveableShape> shapes = new ArrayList<>();
+        shapes.add(shape1);
+        shapes.add(shape2);
+        ShapeIcon icon = new ShapeIcon(shapes,
                 ICON_WIDTH, ICON_HEIGHT);
 
         JLabel label = new JLabel(icon);
@@ -31,7 +35,9 @@ public class AnimationTester
         // Milliseconds between timer ticks
         Timer t = new Timer(DELAY, event ->
         {
-            shape.move();
+            for (MoveableShape shape : shapes) { // for loop added by Jonathan Stewart Thomas
+                shape.move();
+            }
             label.repaint();
         });
         t.start();

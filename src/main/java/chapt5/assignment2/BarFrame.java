@@ -52,7 +52,7 @@ public class BarFrame extends JFrame implements ChangeListener
                 }
             }
         };
-        // added Mouse Listener
+        // mouseListener added by Jonathan Stewart Thomas
         MouseListener mouseListener = new MouseListener() {
             @Override
             public void mouseClicked(MouseEvent e) {
@@ -93,7 +93,7 @@ public class BarFrame extends JFrame implements ChangeListener
         pack();
         setVisible(true);
     }
-    // extracted by Jonathan Stewart Thomas
+    // getMax() extracted by Jonathan Stewart Thomas
     private double getMax() {
         double max = a.get(0); // edited by Jonathan Stewart Thomas
         for (Double v : a)

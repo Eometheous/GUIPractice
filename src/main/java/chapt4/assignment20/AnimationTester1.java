@@ -8,7 +8,7 @@ import javax.swing.*;
  This program implements an animation that moves
  a car shape.
  */
-public class AnimationTester
+public class AnimationTester1
 {
     public static void main(String[] args)
     {

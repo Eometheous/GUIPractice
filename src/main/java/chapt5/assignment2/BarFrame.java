@@ -52,7 +52,7 @@ public class BarFrame extends JFrame implements ChangeListener
                 }
             }
         };
-
+        // added Mouse Listener
         MouseListener mouseListener = new MouseListener() {
             @Override
             public void mouseClicked(MouseEvent e) {
@@ -60,8 +60,8 @@ public class BarFrame extends JFrame implements ChangeListener
             }
             @Override
             public void mousePressed(MouseEvent e) {
-                int x = e.getX() - 8;
-                int y = e.getY() - 30;
+                int x = e.getX();
+                int y = e.getY() - getInsets().top;
                 int barHeight = barIcon.getIconHeight() / a.size();
                 int clickedBar = Math.floorDiv(y, barHeight);
                 double value;

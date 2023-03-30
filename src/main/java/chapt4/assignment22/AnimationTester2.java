@@ -8,7 +8,7 @@ import java.util.ArrayList;
  This program implements an animation that moves
  a car shape.
  */
-public class AnimationTester
+public class AnimationTester2
 {
     public static void main(String[] args)
     {

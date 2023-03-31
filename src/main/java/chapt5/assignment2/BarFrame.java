@@ -60,7 +60,7 @@ public class BarFrame extends JFrame implements ChangeListener
             }
             @Override
             public void mousePressed(MouseEvent e) {
-                int x = e.getX();
+                int x = e.getX() - getInsets().left;
                 int y = e.getY() - getInsets().top;
                 int barHeight = barIcon.getIconHeight() / a.size();
                 int clickedBar = Math.floorDiv(y, barHeight);

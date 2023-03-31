@@ -3,7 +3,7 @@ package chapt4.assignment15;
 import javax.swing.*;
 import java.awt.*;
 
-public class Main {
+public class ZoomTester {
     static JFrame frame;
     public static void main(String[] args) {
         frame = new JFrame("Car Icon");

@@ -18,6 +18,5 @@ public class IconPanel extends JPanel {
     @Override
     protected void paintComponent(Graphics g) {
         icon.paintIcon(this, g, getX(), getY());
-//        super.paintComponent(g);
     }
 }

@@ -6,6 +6,8 @@ import java.util.ArrayList;
 
 /**
  An icon that contains a moveable shape.
+ This code is not my own and is borrowed from the publisher's website.
+ I have added comments anywhere I added to or edited code.
  */
 public class ShapeIcon implements Icon
 {

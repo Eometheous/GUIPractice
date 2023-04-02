@@ -5,6 +5,8 @@ import java.awt.geom.*;
 
 /**
  A car that can be moved around.
+ This code is not my own and is borrowed from the publisher's website.
+ I have added comments anywhere I added to or edited code.
  */
 public class CarShape implements MoveableShape
 {

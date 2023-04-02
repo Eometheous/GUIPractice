@@ -7,6 +7,8 @@ import javax.swing.*;
 /**
  This program implements an animation that moves
  a car shape.
+ This code is not my own and is borrowed from the publisher's website.
+ I have added comments anywhere I added to or edited code.
  */
 public class AnimationTester1
 {

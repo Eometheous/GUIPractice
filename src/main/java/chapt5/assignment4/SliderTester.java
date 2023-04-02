@@ -4,16 +4,15 @@ import javax.swing.*;
 import javax.swing.event.ChangeListener;
 import java.awt.*;
 
-public class Main {
+public class SliderTester {
     static JFrame frame;
     public static void main(String[] args) {
         frame = new JFrame("Car Icon");
-        JPanel iconPanel = new IconPanel();
 
-        JSlider slider = new JSlider();
-        slider.setMinimum(4);
-        slider.setMinimum(0);
-        slider.setValue(1);
+        CarIcon carIcon = new CarIcon(40, 20);
+        JPanel iconPanel = new ZoomableIconPanel(carIcon);
+
+        JSlider slider = new JSlider(25, 200);
         slider.addChangeListener((ChangeListener) iconPanel);
         JPanel sliderPanel = new SliderPanel(slider);
 

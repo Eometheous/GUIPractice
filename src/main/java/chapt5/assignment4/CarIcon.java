@@ -5,7 +5,7 @@ import java.awt.*;
 import java.awt.geom.Ellipse2D;
 import java.awt.geom.Rectangle2D;
 
-public class CarIcon implements Icon {
+public class CarIcon implements Icon, Zoomable {
     private final int width;
     private final int height;
     private double zoomLevel;
@@ -62,8 +62,11 @@ public class CarIcon implements Icon {
     public int getIconHeight() {
         return height;
     }
-
-    public void zoom(Double amount) {
-        zoomLevel += amount;
+    @Override
+    public void zoom(double zoomAmount) {
+        zoomLevel = zoomAmount;
+    }
+    public double getZoomLevel() {
+        return zoomLevel;
     }
 }

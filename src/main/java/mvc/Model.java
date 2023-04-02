@@ -4,6 +4,11 @@ import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 import java.util.ArrayList;
 
+/**
+ * This is the model of the MVC model. It holds data and
+ * listeners so that the data can be viewed in many ways.
+ * @param <T> The type of data that will be stored
+ */
 public class Model <T> {
     ArrayList<T> dataList;
     ArrayList<ChangeListener> listeners;

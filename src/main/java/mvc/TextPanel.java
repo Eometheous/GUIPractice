@@ -5,6 +5,10 @@ import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 import java.awt.*;
 
+/**
+ * This is the view of the MVC model. It gets its data
+ * from the model and makes it viewable via a text area.
+ */
 public class TextPanel extends JPanel implements ChangeListener {
     Model<String> model;
     TextArea textArea;

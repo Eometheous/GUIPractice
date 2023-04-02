@@ -3,6 +3,10 @@ package mvc;
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ * This is the controller of the MVC model. The Add Text button updates
+ * the model's data with the text within the text field.
+ */
 public class MVCTester {
     public static void main(String[] args) {
         JFrame frame = new JFrame();

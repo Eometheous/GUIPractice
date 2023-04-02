@@ -9,8 +9,10 @@ import java.util.ArrayList;
 
 /**
  A class for displaying the model as a column of textfields in a frame.
+ This code is not my own and is borrowed from the publisher's website.
+ I have added comments anywhere I added to or edited code.
  */
-public class TextFrame extends JFrame implements ChangeListener
+public class TextFrame extends JFrame implements ChangeListener // Jonathan Stewart Thomas implemented ChangeListener
 {
     /**
      Constructs a JFrame that contains the textfields containing the data
@@ -65,6 +67,7 @@ public class TextFrame extends JFrame implements ChangeListener
     DataModel dataModel;
     JTextField[] fieldList;
 
+    // Jonathan Stewart Thomas added stateChanged from implementing ChangeListener
     @Override
     public void stateChanged(ChangeEvent e) {
         for (int i = 0; i < fieldList.length; i++) {

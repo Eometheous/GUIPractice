@@ -11,6 +11,8 @@ import java.util.*;
 /**
  A class that implements an Observer object that displays a barchart view of
  a data model.
+ This code is not my own and is borrowed from the publisher's website.
+ I have added comments anywhere I added to or edited code.
  */
 public class BarFrame extends JFrame implements ChangeListener
 {

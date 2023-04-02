@@ -5,7 +5,9 @@ import java.awt.*;
 import java.awt.geom.Ellipse2D;
 import java.awt.geom.Line2D;
 import java.awt.geom.Rectangle2D;
+import java.time.Instant;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.GregorianCalendar;
 
 public class ClockIcon implements Icon {
@@ -23,7 +25,7 @@ public class ClockIcon implements Icon {
         double centerY = frameBody.getCenterY();
         Ellipse2D clockBody = new Ellipse2D.Double();
         clockBody.setFrameFromCenter(centerX, centerY, centerX + radius, centerY + radius);
-        calendar.add(Calendar.SECOND, 1);
+        calendar.setTime(Date.from(Instant.now()));
         int hour = calendar.get(Calendar.HOUR);
         int minute = calendar.get(Calendar.MINUTE);
         int second = calendar.get(Calendar.SECOND);

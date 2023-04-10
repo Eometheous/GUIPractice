@@ -22,6 +22,6 @@ public class TextPanel extends JPanel implements ChangeListener {
     }
     @Override
     public void stateChanged(ChangeEvent e) {
-        textArea.append(model.dataList.get(0) + "\n");
+        textArea.append(model.get(0) + "\n");
     }
 }

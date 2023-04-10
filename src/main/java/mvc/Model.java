@@ -10,8 +10,8 @@ import java.util.ArrayList;
  * @param <T> The type of data that will be stored
  */
 public class Model <T> {
-    ArrayList<T> dataList;
-    ArrayList<ChangeListener> listeners;
+    private final ArrayList<T> dataList;
+    private final ArrayList<ChangeListener> listeners;
     public Model() {
         dataList = new ArrayList<>();
         listeners = new ArrayList<>();

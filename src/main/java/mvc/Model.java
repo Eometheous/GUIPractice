@@ -28,4 +28,5 @@ public class Model <T> {
             listener.stateChanged(new ChangeEvent(this));
         }
     }
+    public T get(int index) {return dataList.get(index);}
 }
